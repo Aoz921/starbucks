@@ -2,23 +2,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackBar = require('webpackbar');
 const path = require('path');
-const glob = require('glob');
-const views = glob
-  .sync(path.resolve(__dirname, './src/views/*/*.html'))
-  .reduce((prev, current) => {
-    const key = current.match(/\/views\/(\w+)\//)[1];
-    prev[key] = current.replace('.html', '');
-    return prev;
-  }, {});
 module.exports = {
   entry: {
-    ...views,
-    common: './src/index.js',
+    // ...views,
+    home: './src/views/home/home.js',
+    menu: './src/views/menu/menu.js',
+    more: './src/views/more/more.js',
+    store: './src/views/store/store.js',
+    account: './src/views/account/account.js',
+    coummon: './src/index.js',
   },
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].[fullhash:8].js',
+    filename: 'js/[name].[fullhash:8].js',
   },
   module: {
     rules: [
@@ -52,9 +49,12 @@ module.exports = {
     lodash: '_',
   },
   devServer: {
+    // index: path.resolve(__dirname, 'home.html'),
     open: ['/home.html'],
     // 配置前端请求代理
     proxy: {
+      // 在开发环境下面代理的目标是http://127.0.0.1:3000
+      // 在生产环境下面代理的目标是http://api.cc0820.top:3000
       '^/api': {
         target: 'https://www.starbucks.com.cn/',
       },
@@ -70,25 +70,37 @@ module.exports = {
   plugins: [
     new WebpackBar(),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash:8].css',
+      filename: 'css/[main].[contenthash:8].css',
     }),
-    // new HtmlWebpackPlugin({
-    //   template: './public/index.html',
-    //   cdn: {
-    //     script: [
-    //       'https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js',
-    //       'https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.core.min.js',
-    //     ],
-    //     style: [],
-    //   },
-    // }),
-    ...Object.entries(views).map(
-      ([key, value]) =>
-        new HtmlWebpackPlugin({
-          template: value.replace(/$/, '.html'),
-          chunks: ['common', key],
-          filename: `${key}.html`,
-        })
-    ),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      template: './src/views/home/home.html',
+      filename: 'home.html',
+      chunks: ['common', 'home'],
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      template: './src/views/account/account.html',
+      filename: 'account.html',
+      chunks: ['common', 'account'],
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      filename: 'menu.html',
+      template: './src/views/menu/menu.html',
+      chunks: ['common', 'menu'],
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      filename: 'more.html',
+      template: './src/views/more/more.html',
+      chunks: ['common', 'more'],
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      filename: 'store.html',
+      template: './src/views/store/store.html',
+      chunks: ['common', 'store'],
+    }),
   ],
 };

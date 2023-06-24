@@ -22,6 +22,7 @@ var mySwiper = new Swiper ('.swiper', {
     slidesPerView: 3, // 同时显示的轮播内容个数
     spaceBetween: 10,
     
+    
    
     navigation: {
       nextEl: '.swiper-button-next', // 下一张按钮的类名或选择器

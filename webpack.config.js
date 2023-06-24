@@ -50,8 +50,8 @@ module.exports = {
   },
   devServer: {
     // index: path.resolve(__dirname, 'home.html'),
-    open: ['/home.html'],
-    // 配置前端请求代理
+    open: ['/store.html'],
+    // 配置前端请求代理dev
     proxy: {
       // 在开发环境下面代理的目标是http://127.0.0.1:3000
       // 在生产环境下面代理的目标是http://api.cc0820.top:3000

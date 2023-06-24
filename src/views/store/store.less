@@ -1,0 +1,155 @@
+@import "//cdn.suoluomei.com/common/js2.0/vant/v2.12/index.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  height: 100vh;
+
+  .Search {
+    padding: 16px 16px 8px;
+
+    .Search_top {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin: 0 5px;
+      }
+    }
+
+  }
+
+  #Map {
+    height: 40%;
+  }
+
+  .list {
+    width: 100%;
+    display: inline-block;
+    font-size: 0.8vw;
+
+    li {
+      font-size: 1.1rem;
+      width: 100%;
+      display: flex;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-around;
+
+      .list_right {
+        width: 15%;
+
+        .img1 {
+          width: 4vw;
+          height: 4vw;
+          display: inline-block;
+        }
+      }
+
+      .list_center {
+        width: 70%;
+
+        p {
+          font-size: 0.8vw;
+          display: inline-block;
+        }
+
+        .img2 {
+          margin-left: 4px;
+          width: 40px;
+          vertical-align: middle;
+        }
+
+        .ziti {
+          color: rgba(0, 0, 0, 0.56);
+          font-weight: normal;
+          display: block;
+          margin-top: 4px;
+          font-size: 0.6vw;
+        }
+
+        span {
+          font-size: 0.7vw;
+          color: black;
+        }
+      }
+
+      .list_left {
+        width: 15%;
+        position: relative;
+
+        span {
+          position: absolute;
+          left: 3vw;
+          bottom: 4vw;
+          font-size: 0.6vw;
+        }
+
+        .img3 {
+          width: 8vw;
+          height: 8vw;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .button {
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+
+    ul {
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+      display: flex;
+      margin: 0;
+      width: 100%;
+      padding: 0 6px;
+
+      li {
+        position: relative;
+        margin: 0px;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        width: 20%;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        .color {
+          color: #00A862;
+        }
+        a {
+          box-sizing: border-box;
+          display: block;
+          ;
+          text-align: center;
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.56);
+          line-height: 1;
+          padding: 6px 4px;
+
+          div {
+            margin-top: 4px;
+            display: block;
+          }
+
+          span {
+            display: block;
+            height: 28px;
+            margin-bottom: 3px;
+            pointer-events: none;
+            position: relative;
+            width: 100%;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}

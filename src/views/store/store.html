@@ -3,12 +3,123 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+  <title>-星巴克门店-</title>
+  <!-- <link rel="stylesheet" href="./store.css"> -->
+  <script src="https://webapi.amap.com/loader.js"></script>
+  <style>
+    @font-face {
+    font-family: 'iconfont';
+    src: url('../iconfont/iconfont.woff2?t=1687508857534') format('woff2'),
+        url('../iconfont/iconfont.woff?t=1687508857534') format('woff'),
+        url('../iconfont/iconfont.ttf?t=1687508857534') format('truetype');
+    }
+    
+    .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+</style>
 </head>
 
 <body>
-  <h1>Store</h1>
+  <!-- 主体部分 -->
+  <div id="app">
+    <div class="Search">
+      <div class="Search_top" @click="DialogShow = !DialogShow">
+        <van-icon name="location" color="#00A862"></van-icon>
+        <span>{{ areaData[0].name || '选择省' }}</span>
+        <span>{{ areaData[1].name || '选择市' }}</span>
+        <span>{{ areaData[2].name || '选择区' }}</span>
+        <van-icon name="arrow-down"></van-icon>
+      </div>
+      <div class="Search_bottom">
+        <van-search v-model="SearchValue" placeholder="请输入地名" show-action>
+          <div slot="action" @click="onSearch">搜索</div>
+        </van-search>
+      </div>
+    </div>
+    <!-- 地图部分 -->
+    <div id="Map"></div>
+    <van-popup v-model="DialogShow" position="bottom">
+      <van-area ref="myArea" :area-list="areaList" @confirm="DialogConfirm" @cancel="DialogShow = !DialogShow" />
+    </van-popup>
+    <!-- 信息部分 -->
+    <ul class="list">
+      <li>
+        <div class="list_right">
+          <img class="img1" src="	https://www.starbucks.com.cn/assets/icons/icon-info-green.svg" alt="">
+        </div>
+        <div class="list_center">
+          <p>武汉阳逻万达店</p>
+          <img class="img2" src="https://www.starbucks.com.cn/assets/icons/icon-mop.svg" alt="">
+          <small class="ziti">武汉市 湖北省武汉市 湖北省武汉市新洲区湖北武汉新洲区阳逻街柴泊大道19号万达广场1层1001号商铺</small>
+          <span>1.4km</span>
+        </div>
+        <div class="list_left">
+          <span>1</span>
+          <img class="img3" src="	https://www.starbucks.com.cn/assets/icons/icon-pin-solid-grey.svg" alt="">
+        </div>
+      </li>
+      <li>
+        <div class="list_right">
+          <img class="img1" src="	https://www.starbucks.com.cn/assets/icons/icon-info-green.svg" alt="">
+        </div>
+        <div class="list_center">
+          <p>武汉首义汇店</p>
+          <img class="img2" src="https://www.starbucks.com.cn/assets/icons/icon-mop.svg" alt="">
+          <small class="ziti">武汉市 湖北省武汉市  湖北省武汉市武昌区张之洞路151号一层85-88室</small>
+          <span>5.2km</span>
+        </div>
+        <div class="list_left">
+          <span>2</span>
+          <img class="img3" src="	https://www.starbucks.com.cn/assets/icons/icon-pin-solid-grey.svg" alt="">
+        </div>
+      </li>
+    </ul>
+    <!-- 底部样式 -->
+    <div class="button">
+      <ul class="list">
+          <li>
+              <a href="#" class="color">
+                <img class="iconfont" src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home.svg" alt="">
+                  <div>主页</div>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                <img class="iconfont" src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home.svg" alt="">
+                  <div>门店</div>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                <img class="iconfont" src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-account.svg" alt="">
+                  <div>我的账户</div>
+              </a>  
+          </li>
+          <li>
+              <a href="#">
+                <img class="iconfont" src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-menu.svg" alt="">
+                  <div>菜单</div>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                <img class="iconfont" src="	https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-more.svg" alt="">
+                  <div>更多</div>
+              </a>
+          </li>
+      </ul>
+  </div>
+  </div>
 </body>
+
+<script src="//cdn.suoluomei.com/common/js2.0/vue/v2.5.16/vue.js"></script>
+<script src="//cdn.suoluomei.com/common/js2.0/vant/v2.12/vant.min.js"></script>
+<script type="module" src="../store/store.js"></script>
 
 </html>

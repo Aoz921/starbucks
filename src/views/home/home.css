@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+nav {
+  padding: 16px 16px 0 16px;
+}
+.swiper {
+  width: 100%;
+  margin-top: 2.6667vw;
+}
+.swiper img {
+  width: 100%;
+}
+.swiper .swiper-button-next {
+  background-color: transparent !important;
+  color: white;
+}
+.content {
+  padding: 4.2vw 3.1333vw 8.4vw;
+  background-color: #f7f7f7;
+}
+.content .wrapper a {
+  display: block;
+  margin-top: 4.2vw;
+}
+.content .wrapper a img {
+  width: 100%;
+  height: 217px;
+  border-radius: 0.6667vw;
+}
+.club {
+  background-color: white;
+  padding: 0 3.1333vw;
+  text-align: center;
+}
+.club .club-text {
+  padding: 4.2vw;
+}
+.club .club-text h2 {
+  margin-bottom: 2.5vw;
+  font-weight: 400;
+}
+.club .club-text .understand {
+  color: rgba(0, 0, 0, 0.56);
+  line-height: 9.3333vw;
+}
+.club .club-text .understand a {
+  color: #C2A661;
+}
+.club .club-text .account {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.6667vw;
+}
+.club .club-text .account a {
+  padding: 1.0667vw 2.6667vw;
+  border: 1px solid #00A862;
+  border-radius: 4vw;
+  color: #00A862;
+  margin-right: 0.6667vw;
+}
+.club .images {
+  margin-top: 10vw;
+  height: 31.3333vw;
+  padding-bottom: 24px;
+}
+.selected {
+  background-color: #f7f7f7;
+  padding-top: 12vw;
+}
+.selected .selected-text {
+  padding: 0 3.1333vw;
+  text-align: center;
+}
+.selected .selected-text > h2 {
+  font-weight: 400;
+}
+.selected .selected-text > p {
+  color: rgba(0, 0, 0, 0.56);
+  line-height: 15.3333vw;
+}
+.selected .selected-text ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12.6667vw;
+}
+.selected .selected-text ul li {
+  width: 50%;
+  padding: 1.6vw;
+  margin-bottom: 12vw;
+  box-sizing: border-box;
+}
+.selected .selected-text ul li a {
+  background-color: white;
+  display: block;
+  line-height: 9.6667vw;
+}
+.selected .selected-text ul li a img {
+  width: 50%;
+  margin-top: -16%;
+}
+.selected .selected-text ul li a .title-1 {
+  color: black;
+}
+.selected .selected-text ul li a .margin {
+  color: rgba(0, 0, 0, 0.56);
+  font-size: 3.4vw;
+}
+.selected .selected-text ul li a .caption {
+  color: #C2A661;
+  font-size: 1.8667vw;
+}
+.hall {
+  padding: 6vw 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  /* 添加额外样式，隐藏左右按钮 */
+}
+.hall .hall-text {
+  line-height: 10vw;
+}
+.hall .hall-text h2 {
+  font-weight: 400;
+}
+.hall .hall-text p {
+  color: rgba(0, 0, 0, 0.56);
+}
+.hall .swiper-container {
+  width: 2300px;
+  height: 200px;
+  margin-top: 10vw;
+}
+.hall .swiper-container .swiper-slide {
+  height: 46vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+  background-size: 100% 70%;
+  border: 1px solid #ccc;
+}
+.hall .swiper-container .swiper-slide .tag {
+  font-size: 1.8667vw;
+  background: #C2A661;
+  color: #FFF;
+  position: absolute;
+  padding: 4px 12px;
+  left: 0px;
+  top: 6px;
+}
+.hall .swiper-container .swiper-slide .st {
+  position: absolute;
+  bottom: 6px;
+  font-weight: 400;
+  font-size: 4vw;
+}
+.hall .swiper-container .one {
+  width: 67.3333vw !important;
+  background-image: url(https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-coffee-cultivation-kv.jpg);
+  background-repeat: no-repeat;
+}
+.hall .swiper-container .two {
+  width: 67.3333vw !important;
+  background-image: url(https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-4-fundamentals-kv.jpg);
+  background-repeat: no-repeat;
+}
+.hall .swiper-container .three {
+  width: 67.3333vw !important;
+  background-image: url(https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-roast-story-kv.jpg);
+  background-repeat: no-repeat;
+}
+.hall .swiper-container .four {
+  width: 67.3333vw !important;
+  background-image: url(https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-pour-over-kv.jpg);
+  background-repeat: no-repeat;
+}
+.hall .swiper-button-disabled {
+  opacity: 0;
+}
+.hall .btn {
+  top: 62%;
+}
+.foot {
+  text-align: center;
+  font-size: 1.8667vw;
+  margin-bottom: 20vw;
+}
+.button {
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+}
+.button ul {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+  display: flex;
+  margin: 0;
+  width: 100%;
+  padding: 0 6px;
+}
+.button ul li {
+  position: relative;
+  margin: 0px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  width: 20%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.button ul li .color {
+  color: #00A862;
+}
+.button ul li a {
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.56);
+  line-height: 1;
+  padding: 6px 4px;
+}
+.button ul li a div {
+  margin-top: 4px;
+  display: block;
+}
+.button ul li a span {
+  display: block;
+  height: 28px;
+  margin-bottom: 3px;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+  line-height: 28px;
+}

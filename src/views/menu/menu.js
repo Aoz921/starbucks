@@ -123,31 +123,31 @@ function menuRender(arr,parentNode){
 let footed = document.querySelector('.footed')
 let footArr = [
     {
-        href:'../home/home.html',
+        href:'../home.html',
         src1:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home.svg',
         src2:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home-active.svg',
         title:'主页'
     },
     {
-        href:'../store/store.html',
+        href:'../store.html',
         src1:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-stores.svg',
         src2:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-stores-active.svg',
         title:'门店'
     },
     {
-        href:'../account/account.html',
+        href:'../account.html',
         src1:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-account.svg',
         src2:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-account-active.svg',
         title:'我的账户'
     },
     {
-        href:'../menu/menu.html',
+        href:'../menu.html',
         src1:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-menu.svg',
         src2:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-menu-active.svg',
         title:'菜单'
     },
     {
-        href:'../more/more.html',
+        href:'../more.html',
         src1:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-more.svg',
         src2:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-more-active.svg',
         title:'更多'

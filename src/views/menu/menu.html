@@ -1,14 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜单</title>
+    <!-- <link rel="stylesheet" href="./menu.css"> -->
+  </head>
 
-<body>
-  <h1>MENU</h1>
-</body>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a class="logo" href="/">
+          <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/logo.svg" alt="星巴克">
+        </a>
+        <div class="primary">
+          <ul>
+            
+            <li class="stores">
+              <a id="stores-primary" href="/stores/">
+                门店
+              </a>
+            </li>
+            
+            <li class="account">
+              <a id="account-primary" href="/account/"><span data-reactroot="" class="">我的帐户</span></a>
+            </li>
+            
+            <li class="menu">
+              <a id="menu-primary" href="/menu/" class="active">
+                菜单
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+  
+        <a class="icon trigger" rel="nav-overlay" id="nav-menu">
+          <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-hamburger.svg">
+        </a>
+  
+      </header>
+  
+      <div class="body">
+        <nav class="container middle secondary">
+          <div class="display-1 menu">菜单</div>
+          <div class="tabs-wrapper">
+            <ul class="subcategories">
+              
+              <li>
+                <a id="side_menu_all" href="/menu/" class="active">
+                  全部
+                </a>
+              </li>
+              
+              <li>
+                <a id="side_menu_beverages" href="/menu/beverages/">
+                  饮料
+                </a>
+              </li>
+              
+              <li>
+                <a id="side_menu_food" href="/menu/food/">
+                  美食
+                </a>
+              </li>
+              
+              <li>
+                <a id="side_menu_coffee" href="/menu/coffee/">
+                  咖啡产品
+                </a>
+              </li>
+              
+              <li>
+                <a id="side_menu_merchandise" href="/menu/merchandise/">
+                  商品
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <section id="content">
+        <div class="tag_ad">广告</div>
+    </section>
+    <!-- <iframe src="../foot/foot.html" width="100%" height="60px" frameborder="0" scrolling="no"></iframe> -->
+    <!-- 页脚 -->
+    <footer>
+      <!-- 底部 -->
+      <ul class="footed"></ul>
+    </footer>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="./menu.js"></script> -->
+  </body>
 
 </html>

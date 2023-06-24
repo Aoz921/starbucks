@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .containerBox {
+    width: 100%;
+  }
+  
+  .containerBox .headerBox img{
+      width: 36px;
+      height: 36px;
+  }
+  
+  .containerBox .headerBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3vw 3vw 3vw 3vw;
+  }
+  
+  .containerBox .headerBox .iconfont {
+    font-size: 7vw;
+    color: #a6a5a5;
+  }
+  
+  .containerBox .bodyBox ul li a {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .containerBox .bodyBox ul li {
+    height: 8vw;
+    line-height: 8vw;
+  }
+  
+  .containerBox .bodyBox {
+    margin: 10vw 3vw 3vw 3vw;
+  }
+  
+  .containerBox .bodyBox ul li:nth-child(3){
+      margin: 2vw auto;
+  }
+  
+  .containerBox .dlu{
+      margin: 7vw 3vw 3vw 3vw;
+      display: flex;
+      align-items: center;
+  }
+  
+  .containerBox .dlu .dlu_one{
+      display: flex;
+      align-items: center;
+      color: #00A862;
+  }
+  
+  .containerBox .dlu .dlu_two{
+      color: #00A862;
+      border: 1px solid #00A862;
+      width: 12vw;
+      height: 7vw;
+      border-radius: 14px;
+      text-align: center;
+      line-height: 7vw;
+      margin-left: 10vw;
+  }
+  
+  .containerBox .footer_box{
+      margin: 23vw 3vw 3vw 3vw;
+      color:#a6a5a5;
+  }
+  
+  .containerBox .footer_box a{
+      color:#a6a5a5;
+      font-size: 1.2vw;
+  }

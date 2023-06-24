@@ -1,4 +1,262 @@
-h1 {
-  background-color: red;
-  color: #fff;
+*{margin: 0;padding: 0;text-decoration: none;list-style: none;}
+
+nav{
+  padding: 16px 16px 0 16px;
+}
+
+.swiper {
+  width: 100%;
+  margin-top: 2.6667vw;
+  img{
+    width: 100%;
+  }
+  .swiper-button-next{
+    background-color: transparent !important;
+    color: white;
+  }
+}  
+
+.content{
+  padding: 4.2vw 3.1333vw 8.4vw;
+  background-color: #f7f7f7;
+  .wrapper{
+    a{
+      display: block;
+      margin-top: 4.2vw;
+      img{
+        width: 100%;
+        height: 217px;
+        border-radius: 0.6667vw;
+      }
+    }
+  }
+}
+
+.club{
+  background-color: white;
+  padding: 0 3.1333vw;
+  text-align: center;
+  .club-text{
+    padding: 4.2vw ;
+    h2{
+      margin-bottom: 2.5vw;
+      font-weight: 400;
+    }
+    .understand{
+      color: rgba(0, 0, 0, 0.56);
+      line-height: 9.3333vw;
+      a{
+        color: #C2A661;
+      }
+    }
+    .account{
+      display: flex;
+      justify-content: center;
+      margin-top: 2.6667vw;
+      a{
+        padding: 1.0667vw 2.6667vw;
+        border: 1px solid #00A862;
+        border-radius: 4vw;
+        color: #00A862;
+        margin-right: 0.6667vw;
+      }
+    }
+  }
+  .images{
+    margin-top: 10vw;
+    height: 31.3333vw;
+    padding-bottom: 24px;
+  }
+}
+
+.selected{
+  background-color: #f7f7f7;
+  padding-top: 12vw;
+  .selected-text{
+    padding: 0 3.1333vw;
+    text-align: center;
+    >h2{
+      font-weight: 400;
+    }
+    >p{
+      color: rgba(0, 0, 0, 0.56);
+      line-height: 15.3333vw;
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 12.6667vw;
+      li{
+        width: 50%;
+        padding: 1.6vw;
+        margin-bottom: 12vw;
+        box-sizing: border-box;
+        a{
+          background-color: white;
+          display: block;
+          line-height: 9.6667vw;
+          img{
+            width: 50%;
+            margin-top: -16%;
+            
+          }
+          .title-1{
+            color: black;
+          }
+          .margin{
+            color: rgba(0, 0, 0, 0.56);
+            font-size: 3.4vw;
+          }
+          .caption{
+            color: #C2A661;
+            font-size: 1.8667vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hall{
+  // height: 100vw;
+  padding: 6vw 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  .hall-text{
+    line-height: 10vw;
+    h2{
+      font-weight: 400;
+    }
+    p{
+      color: rgba(0, 0, 0, 0.56);
+    }
+  }
+  .swiper-container {
+    width: 2300px;
+    height: 200px;
+    margin-top: 10vw;
+    .swiper-slide {
+      // width: 63.3333vw !important;
+      height: 46vw;
+      text-align: center;
+      // background: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: #333;
+      background-size: 100% 70%;
+      border: 1px solid #ccc;
+      .tag{
+        font-size: 1.8667vw;
+        background: #C2A661;
+        color: #FFF;
+        position: absolute;
+        padding: 4px 12px;
+        left: 0px;
+        top: 6px;
+      }
+      .st{
+        position: absolute;
+        bottom: 6px;
+        font-weight: 400;
+        font-size: 4vw;
+      }
+    }
+    .one{
+      width: 67.3333vw !important;
+      // height: 36vw;
+      background-image: url(https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-coffee-cultivation-kv.jpg);
+      background-repeat: no-repeat;
+    }
+     .two{
+      width: 67.3333vw !important;
+      // height: 36vw;
+      background-image: url(https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-4-fundamentals-kv.jpg);
+      background-repeat: no-repeat;
+    }
+     .three{
+      width: 67.3333vw !important;
+      // height: 36vw;
+      background-image: url(https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-roast-story-kv.jpg);
+      background-repeat: no-repeat;
+    }
+     .four{
+      width: 67.3333vw !important;
+      // height: 36vw;
+      background-image: url(https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/coffeehouse-pour-over-kv.jpg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  
+  /* 添加额外样式，隐藏左右按钮 */
+  .swiper-button-disabled {
+    opacity: 0;
+  }
+
+  .btn{
+    top: 62%;
+  }
+  
+  
+}
+
+.foot{
+  text-align: center;
+  font-size: 1.8667vw;
+  margin-bottom: 20vw;
+}
+
+.button {
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+}
+.button ul {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+  display: flex;
+  margin: 0;
+  width: 100%;
+  padding: 0 6px;
+}
+.button ul li {
+  position: relative;
+  margin: 0px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  width: 20%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.button ul li .color {
+  color: #00A862;
+}
+.button ul li a {
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.56);
+  line-height: 1;
+  padding: 6px 4px;
+}
+.button ul li a div {
+  margin-top: 4px;
+  display: block;
+}
+.button ul li a span {
+  display: block;
+  height: 28px;
+  margin-bottom: 3px;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+  line-height: 28px;
 }

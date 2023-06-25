@@ -16,6 +16,31 @@
 #app .Search .Search_top span {
   margin: 0 5px;
 }
+#app .Search .Search_bottom {
+  position: relative;
+}
+#app .Search .Search_bottom input {
+  padding-left: 6px;
+  margin-top: 6px;
+  width: 288px;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+#app .Search .Search_bottom input:hover {
+  border-color: #00A862;
+}
+#app .Search .Search_bottom .img4 {
+  position: absolute;
+  bottom: 0px;
+  right: 60px;
+}
+#app .Search .Search_bottom a {
+  margin-left: 6px;
+}
+#app .Search .Search_bottom a span {
+  color: #00A862;
+}
 #app #Map {
   height: 40%;
 }
@@ -23,6 +48,10 @@
   width: 100%;
   display: inline-block;
   font-size: 0.8vw;
+  background-color: #fff;
+  margin-bottom: 60px;
+  overflow: scroll;
+  height: 40%;
 }
 #app .list li {
   font-size: 1.1rem;
@@ -37,32 +66,35 @@
   width: 15%;
 }
 #app .list li .list_right .img1 {
-  width: 4vw;
-  height: 4vw;
+  width: 12vw;
+  height: 6vw;
   display: inline-block;
 }
 #app .list li .list_center {
   width: 70%;
-}
-#app .list li .list_center p {
-  font-size: 0.8vw;
-  display: inline-block;
+  padding: 10px 4px;
+  font-size: 4vw;
+  font-weight: 800;
+  color: black;
 }
 #app .list li .list_center .img2 {
   margin-left: 4px;
-  width: 40px;
+  width: 8vw;
+  height: 7vw;
   vertical-align: middle;
 }
 #app .list li .list_center .ziti {
   color: rgba(0, 0, 0, 0.56);
   font-weight: normal;
   display: block;
-  margin-top: 4px;
+  padding: 3px 0px;
   font-size: 0.6vw;
 }
-#app .list li .list_center span {
+#app .list li .list_center .km {
+  margin-top: 3px;
   font-size: 0.7vw;
-  color: black;
+  color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
 }
 #app .list li .list_left {
   width: 15%;
@@ -70,13 +102,14 @@
 }
 #app .list li .list_left span {
   position: absolute;
-  left: 3vw;
-  bottom: 4vw;
-  font-size: 0.6vw;
+  left: 6vw;
+  bottom: 4.4vw;
+  font-size: 0.8vw;
+  color: azure;
 }
 #app .list li .list_left .img3 {
-  width: 8vw;
-  height: 8vw;
+  width: 14vw;
+  height: 9vw;
   text-align: center;
 }
 #app .button {

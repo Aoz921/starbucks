@@ -1,3 +1,5 @@
+import './account.css'
+import './account'
 //选项卡
 let lis = document.querySelectorAll('.xuancar>li');
 let cards = document.querySelectorAll('.cardsneir>div');
@@ -101,7 +103,8 @@ for (let i = 0; i < lis.length; i++) {
 		reToNewImg: function() {
 			var _this = this;
 			var index = Math.round(Math.random() * 3); // 该方法有等于0 的情况
-			var imgSrc = "./img/" + _this.imgList[index] + "";
+			// var imgSrc = "../../../public/images/" + _this.imgList[index] + "";
+			let imgSrc = "https://t.captcha.qq.com/cap_union_new_getcapbysig?img_index=1&image=0279050000a6e6470000000bb5db0b273606&sess=s0gXDpIEDLuNDNuhTD5DvPfgZjVsc9ClNt_2ltsKVjU2yEDKo9uuMVlwQCH9e5XH5eioKcNEXJ4G3-JSXRSZ7hOXCrGBhGQOsKymnOaSkHio7Sl0hW8LM8My9mZVRNcxoUaAVwWilCfefn6sw4G3AAkev-V-Lk3p-OOBodmRPT7RQCyYRGfXCLwkUvTjF6d5R5RXy8PzDXOzvPzMJ7CB9rCFMM7exPgnDbByPN2kdnJU3iKW3VOYNaVSRLMDJs4sEDO3HSIGubAcFXiSu5MLSozTTwxsDeH-nxn7vo9SdYuhgWFcWpHdcGH0E-4ZP2z7ACVXRBGm0YLv2AS7znEo47Yb7T-XD1DrkMnehNI2SmQwM*"
 			_this.slideImg.setAttribute("src", imgSrc);
 			_this.slideBlock.style.backgroundImage = "url(" + imgSrc + ")";
 			_this.slideImg.onload = function(e) {
@@ -222,6 +225,48 @@ var options = {
 };
 SliderBar("slideBar", options);
 
+// 滑块验证
+// var startX = 0; // 初始位置
+// var endX = 0; // 结束位置
+
+// let Slider = document.querySelector('.Slider')
+// let imgSlider = document.querySelector('.imgSlider')
+// let provingHeader1 = document.querySelector('.provingHeader1')
+// Slider.addEventListener('touchstart', function(e) {
+//     startX = e.touches[0].pageX; // 记录起始位置
+// })
+
+// Slider.addEventListener('touchmove', function(e) {
+//     e.preventDefault(); // 阻止页面滚动
+//     endX = e.touches[0].pageX; // 记录结束位置
+//     let move2=(endX - startX)/window.innerWidth*100
+//     if(move2<=-6.5){
+//         Slider.style.transform = `translateX(-6.5*window.innerWidth/100'px')`; // 移动元素
+//         imgSlider.style.transform = `translateX(-6.5*window.innerWidth/100+'px')`;
+//     }else if(move2>=61){
+//         Slider.style.transform = `translateX(61*window.innerWidth/100+'px')`; // 移动元素
+//         imgSlider.style.transform = `translateX(61*window.innerWidth/100+'px')`;
+//     }else{
+//         Slider.style.transform = 'translateX(' + (endX - startX) + 'px)'; // 移动元素
+//         imgSlider.style.transform = 'translateX(' + (endX - startX) + 'px)';
+//     }
+// })
+
+// Slider.addEventListener('touchend', function(e) {
+
+//     let move1=(endX - startX)/window.innerWidth*100;
+//     if(move1<=52&&move1>=49.5) {
+//         proving.style.display='none'
+//         proving2.style.display='flex' 
+//     }else {
+//         provingHeader1.style.display='none'
+//         provingHeader2.style.display='block'
+//         Slider.style.transform = 'translateX(0)'; // 回到原点
+//         imgSlider.style.transform = 'translateX(0)'; // 回到原点
+//         setTimeout(looks, 1000);
+//     }  
+// })
+
 
 //账号样式
 let inps = document.getElementsByTagName('input');
@@ -261,3 +306,55 @@ inps[1].addEventListener('blur', function() {
 	spans[1].style.top = "-3.333vw";
 	spans[1].style.left = "6.533vw";
 })
+
+let footed = document.querySelector('.footed')
+let footArr = [
+    {
+        href:'../home.html',
+        src1:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home.svg',
+        src2:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home-active.svg',
+        title:'主页'
+    },
+    {
+        href:'../store.html',
+        src1:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-stores.svg',
+        src2:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-stores-active.svg',
+        title:'门店'
+    },
+    {
+        href:'../account.html',
+        src1:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-account.svg',
+        src2:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-account-active.svg',
+        title:'我的账户'
+    },
+    {
+        href:'../menu.html',
+        src1:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-menu.svg',
+        src2:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-menu-active.svg',
+        title:'菜单'
+    },
+    {
+        href:'../more.html',
+        src1:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-more.svg',
+        src2:'https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-more-active.svg',
+        title:'更多'
+    }
+]
+footRender(footArr,footed)
+function footRender(arr,parentNode){
+    for(let i = 0 ; i < arr.length ; i++){
+        let liNode = document.createElement('li');
+        liNode.innerHTML = `
+                            <a href="${arr[i].href}" id="footClick">
+                                <span class="icons">
+                                    <img src="${arr[i].src1}">
+                                </span>
+                                <div id="account-mobile"><span class="">${arr[i].title}</span></div>
+                            </a>
+                            `
+    parentNode.appendChild(liNode)
+    }
+} 
+let footANodes = document.querySelectorAll('.footed>li>a')
+footANodes[2].firstElementChild.firstElementChild.src = `${footArr[2].src2}`
+footANodes[2].lastElementChild.firstElementChild.style = 'color:#00A862'

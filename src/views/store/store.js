@@ -41,7 +41,7 @@ new Vue({
             AMapLoader.load({
                 "key": "69611689f3f0a1172ba9eb0720bac7f7",    // 申请好的Web端开发者Key，首次调用 load 时必填
                 "version": "2.0",
-                "plugins": ['AMap.CitySearch', 'AMap.Geolocation'],   // 需要使用的的插件列表，如比例尺'AMap.Scale'等
+                "plugins": ['AMap.CitySearch', 'AMap.Geolocation', 'AMap.ToolBar'],
                 "AMapUI": {           // 是否加载 AMapUI，缺省不加载
                     "version": '1.1', // AMapUI 版本
                     "plugins":['overlay/SimpleMarker'],  // 需要加载的 AMapUI ui插件
@@ -51,6 +51,7 @@ new Vue({
                 },
             }).then((AMap)=>{
                 this.map = new AMap.Map('Map');
+                this.map.addControl(new AMap.ToolBar());
                 this.Position()
             })
         },

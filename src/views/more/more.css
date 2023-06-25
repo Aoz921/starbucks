@@ -82,3 +82,9 @@
       color:#a6a5a5;
       font-size: 1.2vw;
   }
+
+  .containerBox .headerBox .guanbi{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+  }

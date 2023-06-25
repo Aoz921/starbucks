@@ -33,7 +33,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff | eot | ttf | otf | svg)$/,
+        test: /\.(woff | eot | ttf | png |otf | svg)$/,
         type: 'asset/resource',
       },
     ],

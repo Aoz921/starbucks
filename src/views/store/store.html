@@ -37,13 +37,17 @@
         <van-icon name="arrow-down"></van-icon>
       </div>
       <div class="Search_bottom">
-        <van-search v-model="SearchValue" placeholder="请输入地名" show-action>
-          <div slot="action" @click="onSearch">搜索</div>
-        </van-search>
+        <!-- <van-search v-model="SearchValue" placeholder="请输入地址查找门店" show-action>
+          <div slot="action" @click="onSearch">筛选</div>
+        </van-search> -->
+        <input type="text" placeholder="请输入地址查找门店">
+        <img class="img4" src="https://www.starbucks.com.cn/assets/icons/icon-search.svg" alt="">
+        <a href="#"><span>筛选</span></a>
       </div>
     </div>
     <!-- 地图部分 -->
-    <div id="Map"></div>
+    <div id="Map">
+    </div>
     <van-popup v-model="DialogShow" position="bottom">
       <van-area ref="myArea" :area-list="areaList" @confirm="DialogConfirm" @cancel="DialogShow = !DialogShow" />
     </van-popup>
@@ -54,10 +58,10 @@
           <img class="img1" src="	https://www.starbucks.com.cn/assets/icons/icon-info-green.svg" alt="">
         </div>
         <div class="list_center">
-          <p>武汉阳逻万达店</p>
+          武汉阳逻万达店
           <img class="img2" src="https://www.starbucks.com.cn/assets/icons/icon-mop.svg" alt="">
-          <small class="ziti">武汉市 湖北省武汉市 湖北省武汉市新洲区湖北武汉新洲区阳逻街柴泊大道19号万达广场1层1001号商铺</small>
-          <span>1.4km</span>
+          <small class="ziti">湖北省武汉市新洲区湖北武汉新洲区阳逻街柴泊大道19号万达广场1层1001号商铺</small>
+          <span  class="km">1.4km</span>
         </div>
         <div class="list_left">
           <span>1</span>
@@ -69,13 +73,43 @@
           <img class="img1" src="	https://www.starbucks.com.cn/assets/icons/icon-info-green.svg" alt="">
         </div>
         <div class="list_center">
-          <p>武汉首义汇店</p>
+          武汉首义汇店
           <img class="img2" src="https://www.starbucks.com.cn/assets/icons/icon-mop.svg" alt="">
-          <small class="ziti">武汉市 湖北省武汉市  湖北省武汉市武昌区张之洞路151号一层85-88室</small>
-          <span>5.2km</span>
+          <small class="ziti">湖北省武汉市武昌区张之洞路151号一层85-88室</small>
+          <span class="km">5.2km</span>
         </div>
         <div class="list_left">
           <span>2</span>
+          <img class="img3" src="	https://www.starbucks.com.cn/assets/icons/icon-pin-solid-grey.svg" alt="">
+        </div>
+      </li>
+      <li>
+        <div class="list_right">
+          <img class="img1" src="	https://www.starbucks.com.cn/assets/icons/icon-info-green.svg" alt="">
+        </div>
+        <div class="list_center">
+          武汉火车站到达层
+          <img class="img2" src="https://www.starbucks.com.cn/assets/icons/icon-mop.svg" alt="">
+          <small class="ziti">武汉市青山区武汉火车站到达层靠近西出站口</small>
+          <span class="km">100m</span>
+        </div>
+        <div class="list_left">
+          <span>3</span>
+          <img class="img3" src="	https://www.starbucks.com.cn/assets/icons/icon-pin-solid-grey.svg" alt="">
+        </div>
+      </li>
+      <li>
+        <div class="list_right">
+          <img class="img1" src="	https://www.starbucks.com.cn/assets/icons/icon-info-green.svg" alt="">
+        </div>
+        <div class="list_center">
+          武汉江汉路中心百货店
+          <img class="img2" src="https://www.starbucks.com.cn/assets/icons/icon-mop.svg" alt="">
+          <small class="ziti">武汉市江汉区江汉路129号中心百货1楼</small>
+          <span class="km">0.52km</span>
+        </div>
+        <div class="list_left">
+          <span>4</span>
           <img class="img3" src="	https://www.starbucks.com.cn/assets/icons/icon-pin-solid-grey.svg" alt="">
         </div>
       </li>
@@ -91,6 +125,7 @@
           </li>
           <li>
               <a href="store.html"  class="color">
+                <img class="iconfont" src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home-active.svg" alt="">
                 <img class="iconfont" src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/icons/icon-home.svg" alt="">
                   <div>门店</div>
               </a>
